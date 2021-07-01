@@ -1,18 +1,83 @@
-/*
- * Project Labthree
- * Description:
- * Author:
- * Date:
- */
+SYSTEM_MODE(MANUAL);
+SYSTEM_THREAD(ENABLED);
 
-// setup() runs once, when the device is first turned on.
 void setup() {
-  // Put initialization like pinMode and begin functions here.
-
+  // initlaize pins
+  pinMode(D7, OUTPUT);
+  pinMode(D6, OUTPUT);
+  pinMode(D5, OUTPUT); 
 }
 
-// loop() runs over and over again, as quickly as it can execute.
+// alternate between all colors in LED
 void loop() {
-  // The core of your code will likely live here.
+  
+  // turn red on and off
+  analogWrite(D5, 128);
+  analogWrite(D6, 0);
+  analogWrite(D7, 0);
+  delay(500);
+  analogWrite(D5, 0);
+  analogWrite(D6, 0);
+  analogWrite(D7, 0);
+  delay(500);
 
+  // turn green on and off
+  analogWrite(D5, 0);
+  analogWrite(D6, 128);
+  analogWrite(D7, 0);
+  delay(500);
+  analogWrite(D5, 0);
+  analogWrite(D6, 0);
+  analogWrite(D7, 0);
+  delay(1000);
+  
+  // turn blue on and off
+  analogWrite(D5, 0);
+  analogWrite(D6, 0);
+  analogWrite(D7, 128);
+  delay(500);
+  analogWrite(D5, 0);
+  analogWrite(D6, 0);
+  analogWrite(D7, 0);
+  delay(1000);
+
+  // turn orange on and off
+  analogWrite(D5, 255);
+  analogWrite(D6, 64);
+  analogWrite(D7, 0);
+  delay(500);
+  analogWrite(D5, 0);
+  analogWrite(D6, 0);
+  analogWrite(D7, 0);
+  delay(1000);
+  
+  // turn yellow on and off
+  analogWrite(D5, 255);
+  analogWrite(D6, 128);
+  analogWrite(D7, 0);
+  delay(500);
+  analogWrite(D5, 0);
+  analogWrite(D6, 0);
+  analogWrite(D7, 0);
+  delay(1000);
+
+  // turn purple on and off
+  analogWrite(D5, 255/2);
+  analogWrite(D6, 0);
+  analogWrite(D7, 255/2);
+  delay(500);
+  analogWrite(D5,0);
+  analogWrite(D6,0);
+  analogWrite(D7, 0);
+  delay(1000);
+
+  // turn cyan on and off
+  analogWrite(D5, 15/2);
+  analogWrite(D6, 250/2);
+  analogWrite(D7, 230/2);
+  delay(500);
+  analogWrite(D5,0);
+  analogWrite(D6,0);
+  analogWrite(D7, 0);
+  delay(1000);
 }
