@@ -19,7 +19,7 @@ void loop() {
   analogWrite(D5, 0);
   analogWrite(D6, 0);
   analogWrite(D7, 0);
-  delay(500);
+  delay(1000);
 
   // turn green on and off
   analogWrite(D5, 0);
